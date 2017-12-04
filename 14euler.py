@@ -1,4 +1,4 @@
-# coding: utf-8
+13  # coding: utf-8
 """
 Longest Collatz sequence
 Euler Project – Problem 14
@@ -19,10 +19,12 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 import time
 
 start = time.time()
-greatest_number = 0
-greatest_length = 1
 
-num = int(input("Enter number "))
+colldict = dict()
+#num = int(input("Enter number "))
+num = 13
+n = 1
+colldict = {0: 0, 1: 4}
 
 
 def collatz(number):
@@ -34,17 +36,15 @@ def collatz(number):
     return number
 
 
-print(num)  # print(collatz(43))
-n = 1
+# print(num)  # print(collatz(43))
 
+while collatz((num) != 1):
+    colldict[num] = n
+    print("Number is ", collatz(num))
+    n += 1
 
-def long_coll():
-    while collatz((num) != 1):
-        print(collatz(num))
-        n += 1
-        print(".........", n)
-        num = collatz(num)
-    return num, n
+    print("chain length is", n)
+    num = collatz(num)
 
 
 print("Program completed in", time.time() - start, "seconds")
