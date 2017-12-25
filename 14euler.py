@@ -1,4 +1,4 @@
-13  # coding: utf-8
+# coding: utf-8
 """
 Longest Collatz sequence
 Euler Project – Problem 14
