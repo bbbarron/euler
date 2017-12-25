@@ -22,7 +22,7 @@ start = time.time()
 
 colldict = dict()
 #num = int(input("Enter number "))
-num = 13
+num = 7
 n = 1
 colldict = {0: 0, 1: 4}
 

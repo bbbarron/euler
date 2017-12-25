@@ -20,7 +20,7 @@ import time
 
 start = time.time()
 
-startnum = 13
+startnum = 7
 num = startnum
 n = 1
 max_num = startnum
@@ -37,16 +37,16 @@ def collatz(number):
 
 
 while (collatz(num) != 1):
-    #print("Number is ", collatz(num))
+    print("Number is ", collatz(num))
     n += 1
-    #print("chain length is", n)
+    print("chain length is", n)
     num = collatz(num)
 print (startnum, n)
 if n > max_n:
     max_n = n
     max_num = startnum
 startnum += 1
-n = 1
+n = 0
 collatz(startnum)
 
 print("Program completed in", time.time() - start, "seconds")
