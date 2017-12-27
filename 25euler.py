@@ -24,8 +24,8 @@ What is the index of the first term in the Fibonacci sequence to contain 1000 di
 """
 import time
 start = time.time()
-a = 1 # F1 start value
-b = 0 # F2 start value
+a = 1 # F2 start value
+b = 0 # F1 start value
 n = 1 # Number of terms in the fibonacchi sequence
 l = int(input('Enter number of digits: ')) # Number of digits in the term you are looking for
 
