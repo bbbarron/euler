@@ -23,17 +23,18 @@ import time
 start = time.time()
 
 
-def collatz(n, count=1):
-    while n > 1:
+def collatz(n, count=1):  # starts count at 1 initially
+    while n > 1:  # continue loop until collatz number equals 1
         count += 1
         if n % 2 == 0:
             n = n / 2
         else:
             n = 3 * n + 1
-    return count
+    return count  # returns the number of terms for n
 
 
-max = [0, 0]
+max = [0, 0]  # max[0] is the number with largest sequence ; max[1] is
+# the length of the sequence for max[0]
 for i in range(1000000):
     c = collatz(i)
     if c > max[0]:
